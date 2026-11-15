@@ -13,7 +13,7 @@ AegisPulse is a **Goal-Based, Model-Based, Utility-Based Multi-Agent SRE War-Roo
 
 ## Resilient 90/10 Intelligence Stack
 - **90% Keyless Autonomous Engine:** All telemetry collection, baseline EWMA memory, commit suspicion scoring, and critic gating operate without any API key.
-- **10% LLM Enrichment with Auto-Fallback:** Google Gemini (`gemini-4-hydrogen`) -> Groq (`llama-3.3-70b-versatile`) -> Universal Keyless Synthesizer.
+- **10% LLM Enrichment with Auto-Fallback:** Google Gemini (`gemini-3.1-flash-lite`) -> Groq (`qwen/qwen3.8-27b`) -> Universal Keyless Synthesizer.
 
 ## Local Run & Tests
 ```bash

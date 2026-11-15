@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 743.03,
-    "https://pypi.org/pypi/streamlit/json": 654.85,
-    "https://httpbin.org/status/200": 2334.21
+    "https://api.github.com": 2516.26,
+    "https://pypi.org/pypi/streamlit/json": 1258.64,
+    "https://httpbin.org/status/200": 2836.29
   },
   "incident_history": [
     {
@@ -29,6 +29,14 @@
       "risk_score": 16.0,
       "new_commits_detected": 0,
       "summary": "* **Health:** SEV-3 NOMINAL (risk score 16.0). All 3 probes (`api.github.com`, `pypi.org`, `httpbin.org`) returned HTTP 200 with 0 down endpoints, 0 DNS failures, 0 high-drift alerts, and latencies of 19.8\u2013240.1 ms (92.6"
+    },
+    {
+      "timestamp_utc": "2026-11-15T17:16:18.934505+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-2 DEGRADED",
+      "risk_score": 63.1,
+      "new_commits_detected": 0,
+      "summary": "**AegisPulse Incident Summary: SEV-2 DEGRADED**\n\n*   **Health:** System is operational but degraded; observed significant p99 latency spikes across all probes with a 795% drift on GitHub API metrics.\n*   **Root-Cause Sig"
     }
   ],
   "seen_commit_shas": [
@@ -41,6 +49,6 @@
     "fabaff65598829eff4211dea0df4ddd7af40ff49",
     "6c267a79d34f3632c891074d43f321e04e4ffe1f"
   ],
-  "total_autonomous_runs": 3,
-  "last_run_utc": "2026-11-15T16:53:30.016535+00:00"
+  "total_autonomous_runs": 4,
+  "last_run_utc": "2026-11-15T17:16:18.934505+00:00"
 }
