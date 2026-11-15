@@ -50,7 +50,9 @@ def test_critic_flags_outage_vs_nominal() -> None:
     assert ctx_ok.critic_verdict["severity"] == "SEV-3 NOMINAL"
 
 
-def test_llm_router_universal_fallback_never_fails() -> None:
+def test_llm_router_universal_fallback_never_fails(monkeypatch) -> None:
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GROQ_API_KEY", raising=False)
     res = synthesize_with_fallback(
         prompt="Summarize",
         system_instruction="Be brief",
