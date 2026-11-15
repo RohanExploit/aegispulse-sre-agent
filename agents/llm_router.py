@@ -55,24 +55,27 @@ def _call_gemini(prompt: str, system_instruction: str, api_key: str) -> tuple[st
 
 
 def _call_groq(prompt: str, system_instruction: str, api_key: str) -> tuple[str, str]:
-    """Fallback to Groq Llama 3.3 70B."""
+    """Fallback to Groq Cloud active reasoning models."""
     from groq import Groq
 
     client = Groq(api_key=api_key)
-    model_name = "llama-3.3-70b-versatile"
-    completion = client.chat.completions.create(
-        model=model_name,
-        messages=[
-            {"role": "system", "content": system_instruction},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.25,
-        max_tokens=550,
-    )
-    text = (completion.choices[0].message.content or "").strip()
-    if not text:
-        raise RuntimeError("Groq returned empty output.")
-    return text, model_name
+    for model_name in ("qwen/qwen3.8-27b", "openai/gpt-oss-120b", "openai/gpt-oss-20b"):
+        try:
+            completion = client.chat.completions.create(
+                model=model_name,
+                messages=[
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.25,
+                max_tokens=550,
+            )
+            text = (completion.choices[0].message.content or "").strip()
+            if text:
+                return text, model_name
+        except Exception:
+            continue
+    raise RuntimeError("All Groq models failed or returned empty output.")
 
 
 def synthesize_with_fallback(
