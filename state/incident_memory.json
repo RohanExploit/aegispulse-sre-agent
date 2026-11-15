@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 1052.98,
-    "https://pypi.org/pypi/streamlit/json": 919.56,
-    "https://httpbin.org/status/200": 3231.69
+    "https://api.github.com": 743.03,
+    "https://pypi.org/pypi/streamlit/json": 654.85,
+    "https://httpbin.org/status/200": 2334.21
   },
   "incident_history": [
     {
@@ -21,6 +21,14 @@
       "risk_score": 35.1,
       "new_commits_detected": 0,
       "summary": "### Autonomous War-Room Assessment (SEV-3 NOMINAL)\n- **Service Health**: 3/3 endpoints reachable; 1 latency drift alerts; 0 DNS anomalies.\n- **Change Correlation**: Top inspected commit `f95f2af` (suspicion 37/100) \u2014 \"[c"
+    },
+    {
+      "timestamp_utc": "2026-11-15T16:53:30.016535+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 16.0,
+      "new_commits_detected": 0,
+      "summary": "* **Health:** SEV-3 NOMINAL (risk score 16.0). All 3 probes (`api.github.com`, `pypi.org`, `httpbin.org`) returned HTTP 200 with 0 down endpoints, 0 DNS failures, 0 high-drift alerts, and latencies of 19.8\u2013240.1 ms (92.6"
     }
   ],
   "seen_commit_shas": [
@@ -33,6 +41,6 @@
     "fabaff65598829eff4211dea0df4ddd7af40ff49",
     "6c267a79d34f3632c891074d43f321e04e4ffe1f"
   ],
-  "total_autonomous_runs": 2,
-  "last_run_utc": "2026-11-15T16:46:23.716982+00:00"
+  "total_autonomous_runs": 3,
+  "last_run_utc": "2026-11-15T16:53:30.016535+00:00"
 }
