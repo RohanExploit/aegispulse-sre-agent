@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 1338.79,
-    "https://pypi.org/pypi/streamlit/json": 826.1,
-    "https://httpbin.org/status/200": 1634.95
+    "https://api.github.com": 957.79,
+    "https://pypi.org/pypi/streamlit/json": 609.2,
+    "https://httpbin.org/status/200": 1210.01
   },
   "incident_history": [
     {
@@ -53,6 +53,14 @@
       "risk_score": 16.0,
       "new_commits_detected": 0,
       "summary": "* **Health:** Nominal (SEV-3). All monitored endpoints (GitHub, PyPI, httpbin) are operational with 200 OK statuses.\n* **Root-Cause Signal:** No active outage detected. Latency drift is significantly positive (improved p"
+    },
+    {
+      "timestamp_utc": "2026-11-16T04:06:28.397703+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 16.0,
+      "new_commits_detected": 0,
+      "summary": "* **Health:** System nominal (SEV-3); all endpoints responding with 200 OK and sub-250ms latency.\n* **Root-Cause Signal:** High negative latency drift observed (-86% to -95%); baseline thresholds require recalibration fo"
     }
   ],
   "seen_commit_shas": [
@@ -65,6 +73,6 @@
     "fabaff65598829eff4211dea0df4ddd7af40ff49",
     "6c267a79d34f3632c891074d43f321e04e4ffe1f"
   ],
-  "total_autonomous_runs": 6,
-  "last_run_utc": "2026-11-15T22:21:25.781729+00:00"
+  "total_autonomous_runs": 7,
+  "last_run_utc": "2026-11-16T04:06:28.397703+00:00"
 }
