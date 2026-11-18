@@ -2,8 +2,8 @@
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
     "https://api.github.com": 215.63,
-    "https://pypi.org/pypi/streamlit/json": 152.66,
-    "https://httpbin.org/status/200": 328.95
+    "https://pypi.org/pypi/streamlit/json": 122.04,
+    "https://httpbin.org/status/200": 290.24
   },
   "incident_history": [
     {
@@ -101,6 +101,14 @@
       "risk_score": 15.8,
       "new_commits_detected": 3,
       "summary": "* **Health**: System is nominal (SEV-3). All external probes (GitHub, PyPI, httpbin) returned 200 OK with latencies significantly below baseline.\n* **Root-Cause Signal**: No active incident detected; latency improvements"
+    },
+    {
+      "timestamp_utc": "2026-11-18T23:45:34.379713+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-2 DEGRADED",
+      "risk_score": 55.8,
+      "new_commits_detected": 1,
+      "summary": "* **Health:** SEV-2 DEGRADED. System is operational but experiencing a targeted service disruption on the GitHub API endpoint.\n* **Root-Cause Signal:** API request to `api.github.com` returning 403 Forbidden; telemetry i"
     }
   ],
   "seen_commit_shas": [
@@ -129,8 +137,9 @@
     "8ca30949e4a79692f364f18c7941626fc362a0fb",
     "46e35d33c773f0dbbea2466d45dc800fccdb2438",
     "6c2a0b0ced13501516bb0f369eeead0a75b2a0ce",
-    "40c4303bbb1c30078d2c5503c203425ea4b19d0b"
+    "40c4303bbb1c30078d2c5503c203425ea4b19d0b",
+    "b71e9a400000"
   ],
-  "total_autonomous_runs": 12,
-  "last_run_utc": "2026-11-18T14:54:38.794887+00:00"
+  "total_autonomous_runs": 13,
+  "last_run_utc": "2026-11-18T23:45:34.379713+00:00"
 }
