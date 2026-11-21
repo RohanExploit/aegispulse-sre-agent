@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 87.73,
-    "https://pypi.org/pypi/streamlit/json": 84.25,
-    "https://httpbin.org/status/200": 153.87
+    "https://api.github.com": 82.44,
+    "https://pypi.org/pypi/streamlit/json": 66.77,
+    "https://httpbin.org/status/200": 177.91
   },
   "incident_history": [
     {
@@ -157,6 +157,14 @@
       "risk_score": 15.8,
       "new_commits_detected": 2,
       "summary": "**AegisPulse Incident Summary: SEV-3 NOMINAL**\n\n*   **Health:** System fully operational with zero downtime and stable endpoint latency across all probes.\n*   **Root-Cause Signal:** No active anomalies detected; latency "
+    },
+    {
+      "timestamp_utc": "2026-11-21T13:58:30.806133+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 31.4,
+      "new_commits_detected": 0,
+      "summary": "* **Health:** System status is SEV-3 NOMINAL; all endpoints are reachable with zero DNS failures.\n* **Root-Cause Signal:** Latency drift detected at `httpbin.org` (+52.1%), likely localized performance variance rather th"
     }
   ],
   "seen_commit_shas": [
@@ -200,6 +208,6 @@
     "259fbb652404888bff49b923b8228bd2bd9d4888",
     "3e58e2dca1f86c979cd3674a7044d5fd76d75c7d"
   ],
-  "total_autonomous_runs": 19,
-  "last_run_utc": "2026-11-21T05:00:30.027054+00:00"
+  "total_autonomous_runs": 20,
+  "last_run_utc": "2026-11-21T13:58:30.806133+00:00"
 }
