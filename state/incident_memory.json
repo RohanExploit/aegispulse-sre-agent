@@ -2,8 +2,8 @@
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
     "https://api.github.com": 92.18,
-    "https://pypi.org/pypi/streamlit/json": 67.08,
-    "https://httpbin.org/status/200": 165.94
+    "https://pypi.org/pypi/streamlit/json": 77.98,
+    "https://httpbin.org/status/200": 120.51
   },
   "incident_history": [
     {
@@ -173,6 +173,14 @@
       "risk_score": 14.6,
       "new_commits_detected": 0,
       "summary": "* **Health**: System is nominal (SEV-3); all probe responses are 200 OK with no downtime or critical drift.\n* **Root-Cause Signal**: No active incident detected; minor latency fluctuations observed (e.g., api.github.com "
+    },
+    {
+      "timestamp_utc": "2026-11-22T04:24:56.873307+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-2 DEGRADED",
+      "risk_score": 66.5,
+      "new_commits_detected": 0,
+      "summary": "**AegisPulse Incident Report: SEV-2 DEGRADED**\n\n*   **Health:** System degraded; one active probe failure (GitHub 403) and significant latency drift detected in dependent services.\n*   **Root-Cause Signal:** GitHub 403 r"
     }
   ],
   "seen_commit_shas": [
@@ -216,6 +224,6 @@
     "259fbb652404888bff49b923b8228bd2bd9d4888",
     "3e58e2dca1f86c979cd3674a7044d5fd76d75c7d"
   ],
-  "total_autonomous_runs": 21,
-  "last_run_utc": "2026-11-21T22:39:43.109925+00:00"
+  "total_autonomous_runs": 22,
+  "last_run_utc": "2026-11-22T04:24:56.873307+00:00"
 }
