@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 100.3,
-    "https://pypi.org/pypi/streamlit/json": 65.91,
-    "https://httpbin.org/status/200": 185.44
+    "https://api.github.com": 112.24,
+    "https://pypi.org/pypi/streamlit/json": 74.04,
+    "https://httpbin.org/status/200": 185.58
   },
   "incident_history": [
     {
@@ -221,6 +221,14 @@
       "risk_score": 34.7,
       "new_commits_detected": 8,
       "summary": "* **Health:** System status is SEV-3 Nominal; all endpoints are reachable and returning 200 OK.\n* **Root-Cause Signal:** Detected a 69.6% latency drift on `api.github.com` requests; no DNS or service-level outages observ"
+    },
+    {
+      "timestamp_utc": "2026-11-24T16:54:31.774054+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 16.7,
+      "new_commits_detected": 8,
+      "summary": "*   **Health**: SEV-3 NOMINAL (Risk 16.7). All endpoints (GitHub, PyPI, httpbin) returned HTTP 200 with zero DNS failures or downtime.\n*   **Root-Cause Signal**: No active incident. Latency drift (39.7%\u201341.1%) on GitHub/"
     }
   ],
   "seen_commit_shas": [
@@ -270,8 +278,16 @@
     "64a880fa26e290824898e839126abc66802d2e21",
     "f8e732f683b710a350236122145bd404308f4552",
     "556ff126716b6cbe3fb64be4278cc403d5b63548",
-    "bb6fb8b127776f8416a3b61a13ec275aa6e96ab5"
+    "bb6fb8b127776f8416a3b61a13ec275aa6e96ab5",
+    "bad186f46d3b9bf6884c791b41988c8b1dcc53e5",
+    "5814d928bf2049ef550fecfcb90b5ae3bd814663",
+    "93a28cc435a3d30def5f959821315e47777c183a",
+    "0d941982ee22bf66fe958faf31e9c63311142b73",
+    "dc04125dbaa33d4dda6d0321e442e83dd60bc376",
+    "319512d1d11c9167e8e5f701cef8d236da051fd2",
+    "6e22e0cbea29760b8b2c2210cd1a9c8f9c888cee",
+    "086e42af3d9c72206429725a9e73696eb3a71167"
   ],
-  "total_autonomous_runs": 27,
-  "last_run_utc": "2026-11-24T03:40:56.782265+00:00"
+  "total_autonomous_runs": 28,
+  "last_run_utc": "2026-11-24T16:54:31.774054+00:00"
 }
