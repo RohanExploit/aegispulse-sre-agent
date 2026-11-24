@@ -1,9 +1,9 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 82.98,
-    "https://pypi.org/pypi/streamlit/json": 70.84,
-    "https://httpbin.org/status/200": 181.0
+    "https://api.github.com": 100.3,
+    "https://pypi.org/pypi/streamlit/json": 65.91,
+    "https://httpbin.org/status/200": 185.44
   },
   "incident_history": [
     {
@@ -213,6 +213,14 @@
       "risk_score": 15.7,
       "new_commits_detected": 0,
       "summary": "* **Health:** SEV-3 NOMINAL (Risk Score: 15.7, 0 down, 0 high drift, 0 DNS failures). All endpoints (`api.github.com`, `pypi.org`, `httpbin.org`) responding nominally (HTTP 200).\n* **Root-Cause Signal:** No active outage"
+    },
+    {
+      "timestamp_utc": "2026-11-24T03:40:56.782265+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 34.7,
+      "new_commits_detected": 8,
+      "summary": "* **Health:** System status is SEV-3 Nominal; all endpoints are reachable and returning 200 OK.\n* **Root-Cause Signal:** Detected a 69.6% latency drift on `api.github.com` requests; no DNS or service-level outages observ"
     }
   ],
   "seen_commit_shas": [
@@ -254,8 +262,16 @@
     "3f1009ca3732d345b38e70a18e5f531336cd054b",
     "859dfebcbce0507073cabfa160406c2fb904929d",
     "259fbb652404888bff49b923b8228bd2bd9d4888",
-    "3e58e2dca1f86c979cd3674a7044d5fd76d75c7d"
+    "3e58e2dca1f86c979cd3674a7044d5fd76d75c7d",
+    "cf7fc5268ccfe39f8693d3e97480291ba94244d7",
+    "22e45f7026e1ec7bbbde026255f2237e1ab74cac",
+    "108a0e082e3563ed764512298f8502d135ad46cd",
+    "c9369808b568b6376173a43345552fa8a12d10e0",
+    "64a880fa26e290824898e839126abc66802d2e21",
+    "f8e732f683b710a350236122145bd404308f4552",
+    "556ff126716b6cbe3fb64be4278cc403d5b63548",
+    "bb6fb8b127776f8416a3b61a13ec275aa6e96ab5"
   ],
-  "total_autonomous_runs": 26,
-  "last_run_utc": "2026-11-23T17:01:40.432666+00:00"
+  "total_autonomous_runs": 27,
+  "last_run_utc": "2026-11-24T03:40:56.782265+00:00"
 }
