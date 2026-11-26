@@ -1,19 +1,11 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 88.85,
-    "https://pypi.org/pypi/streamlit/json": 58.51,
-    "https://httpbin.org/status/200": 182.3
+    "https://api.github.com": 99.88,
+    "https://pypi.org/pypi/streamlit/json": 64.42,
+    "https://httpbin.org/status/200": 175.1
   },
   "incident_history": [
-    {
-      "timestamp_utc": "2026-11-15T16:44:21.843472+00:00",
-      "target_repo": "streamlit/streamlit",
-      "severity": "SEV-2 DEGRADED",
-      "risk_score": 52.4,
-      "new_commits_detected": 8,
-      "summary": "### Autonomous War-Room Assessment (SEV-2 DEGRADED)\n- **Service Health**: 3/3 endpoints reachable; 2 latency drift alerts; 0 DNS anomalies.\n- **Change Correlation**: Top inspected commit `f95f2af` (suspicion 52/100) \u2014 \"["
-    },
     {
       "timestamp_utc": "2026-11-15T16:46:23.716982+00:00",
       "target_repo": "streamlit/streamlit",
@@ -245,6 +237,14 @@
       "risk_score": 15.8,
       "new_commits_detected": 6,
       "summary": "* **Health:** SEV-3 NOMINAL (Risk Score: 15.8; 0 down, 0 DNS failures, 0 high drift). All endpoints (GitHub, PyPy, Httpbin) returned HTTP 200 with improved latencies.\n* **Root-Cause Signal:** No active incident; minor re"
+    },
+    {
+      "timestamp_utc": "2026-11-26T01:24:15.724843+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 16.7,
+      "new_commits_detected": 3,
+      "summary": "* **Health:** Nominal (SEV-3). All systems are operational with zero downtime or DNS failures.\n* **Root-Cause Signal:** Observed latency drift (33-41%) on `api.github.com` and `pypi.org` is within acceptable operating va"
     }
   ],
   "seen_commit_shas": [
@@ -309,8 +309,11 @@
     "0c5a242f6d54e748d4a30247f166fa34397a7e10",
     "3bece32dcf579a9015d8908f36c2f9575393d3f7",
     "65b1b73ae8bd5bc11577e945205fb7b626356aba",
-    "a2144f8716c5add78170a9ae60440d4872522f5c"
+    "a2144f8716c5add78170a9ae60440d4872522f5c",
+    "a9a3a4366d4e70f90243b6353e721306197e7084",
+    "585d447928debe4e17607e3fb56b58213a6162f8",
+    "4f75877a4b579d5223c9037b0d6e3a2a18166d40"
   ],
-  "total_autonomous_runs": 30,
-  "last_run_utc": "2026-11-25T16:38:22.535406+00:00"
+  "total_autonomous_runs": 31,
+  "last_run_utc": "2026-11-26T01:24:15.724843+00:00"
 }
