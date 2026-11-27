@@ -1,19 +1,11 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 87.57,
-    "https://pypi.org/pypi/streamlit/json": 60.46,
-    "https://httpbin.org/status/200": 134.69
+    "https://api.github.com": 87.58,
+    "https://pypi.org/pypi/streamlit/json": 61.94,
+    "https://httpbin.org/status/200": 142.55
   },
   "incident_history": [
-    {
-      "timestamp_utc": "2026-11-15T17:16:18.934505+00:00",
-      "target_repo": "streamlit/streamlit",
-      "severity": "SEV-2 DEGRADED",
-      "risk_score": 63.1,
-      "new_commits_detected": 0,
-      "summary": "**AegisPulse Incident Summary: SEV-2 DEGRADED**\n\n*   **Health:** System is operational but degraded; observed significant p99 latency spikes across all probes with a 795% drift on GitHub API metrics.\n*   **Root-Cause Sig"
-    },
     {
       "timestamp_utc": "2026-11-15T17:18:14.580200+00:00",
       "target_repo": "streamlit/streamlit",
@@ -245,6 +237,14 @@
       "risk_score": 14.8,
       "new_commits_detected": 0,
       "summary": "**AegisPulse Incident Summary**\n\n* **System Health:** Nominal (SEV-3); all HTTP probes returned 200 OK with zero availability impact.\n* **Root-Cause Signal:** Latency drifts (~27\u201332%) identified at `api.github.com` and `"
+    },
+    {
+      "timestamp_utc": "2026-11-27T15:55:27.165929+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 15.8,
+      "new_commits_detected": 2,
+      "summary": "**AegisPulse Incident Summary**\n\n*   **Health:** Nominal (SEV-3). All monitored endpoints (GitHub, PyPI, httpbin) returned 200 OK.\n*   **Root-Cause Signal:** No active outage detected. Minor latency drift (max 19.5%) obs"
     }
   ],
   "seen_commit_shas": [
@@ -315,8 +315,10 @@
     "4f75877a4b579d5223c9037b0d6e3a2a18166d40",
     "1819c568449c2bcfe12e47b6b6fcd977b8cb6464",
     "c6a6c9efc1ac6babefd78dc5f1786446de6c258a",
-    "1aa6cd3b3603737a6b8e41bd2abe6d56d794160d"
+    "1aa6cd3b3603737a6b8e41bd2abe6d56d794160d",
+    "04884fb17d902c5e8066f60bc4bcc16b371f3ab6",
+    "5f96a49730c615df4c9f40981ca05675e7d8d749"
   ],
-  "total_autonomous_runs": 33,
-  "last_run_utc": "2026-11-27T01:21:53.798357+00:00"
+  "total_autonomous_runs": 34,
+  "last_run_utc": "2026-11-27T15:55:27.165929+00:00"
 }
