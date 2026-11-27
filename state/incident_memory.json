@@ -1,19 +1,11 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 79.76,
-    "https://pypi.org/pypi/streamlit/json": 55.86,
-    "https://httpbin.org/status/200": 138.5
+    "https://api.github.com": 87.57,
+    "https://pypi.org/pypi/streamlit/json": 60.46,
+    "https://httpbin.org/status/200": 134.69
   },
   "incident_history": [
-    {
-      "timestamp_utc": "2026-11-15T16:53:30.016535+00:00",
-      "target_repo": "streamlit/streamlit",
-      "severity": "SEV-3 NOMINAL",
-      "risk_score": 16.0,
-      "new_commits_detected": 0,
-      "summary": "* **Health:** SEV-3 NOMINAL (risk score 16.0). All 3 probes (`api.github.com`, `pypi.org`, `httpbin.org`) returned HTTP 200 with 0 down endpoints, 0 DNS failures, 0 high-drift alerts, and latencies of 19.8\u2013240.1 ms (92.6"
-    },
     {
       "timestamp_utc": "2026-11-15T17:16:18.934505+00:00",
       "target_repo": "streamlit/streamlit",
@@ -245,6 +237,14 @@
       "risk_score": 15.8,
       "new_commits_detected": 3,
       "summary": "* **Health:** System nominal (SEV-3); all endpoints responding with 200 OK and latency significantly below established baselines.\n* **Root-Cause Signal:** No anomalies detected. Observed latency drops (up to -69%) are in"
+    },
+    {
+      "timestamp_utc": "2026-11-27T01:21:53.798357+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 14.8,
+      "new_commits_detected": 0,
+      "summary": "**AegisPulse Incident Summary**\n\n* **System Health:** Nominal (SEV-3); all HTTP probes returned 200 OK with zero availability impact.\n* **Root-Cause Signal:** Latency drifts (~27\u201332%) identified at `api.github.com` and `"
     }
   ],
   "seen_commit_shas": [
@@ -317,6 +317,6 @@
     "c6a6c9efc1ac6babefd78dc5f1786446de6c258a",
     "1aa6cd3b3603737a6b8e41bd2abe6d56d794160d"
   ],
-  "total_autonomous_runs": 32,
-  "last_run_utc": "2026-11-26T16:08:32.974906+00:00"
+  "total_autonomous_runs": 33,
+  "last_run_utc": "2026-11-27T01:21:53.798357+00:00"
 }
