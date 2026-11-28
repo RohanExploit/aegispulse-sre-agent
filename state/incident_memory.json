@@ -1,19 +1,11 @@
 {
   "agent_name": "AegisPulse Incident Commander",
   "baseline_latency_ms": {
-    "https://api.github.com": 87.58,
-    "https://pypi.org/pypi/streamlit/json": 61.94,
-    "https://httpbin.org/status/200": 142.55
+    "https://api.github.com": 80.45,
+    "https://pypi.org/pypi/streamlit/json": 60.82,
+    "https://httpbin.org/status/200": 166.56
   },
   "incident_history": [
-    {
-      "timestamp_utc": "2026-11-15T17:18:14.580200+00:00",
-      "target_repo": "streamlit/streamlit",
-      "severity": "SEV-3 NOMINAL",
-      "risk_score": 16.0,
-      "new_commits_detected": 0,
-      "summary": "*   **Health**: SEV-3 NOMINAL (Risk 16.0). All 3 endpoints returned HTTP 200 with zero failures or DNS errors.\n*   **Root-Cause Signal**: No active incident. Latency is significantly below baseline (e.g., api.github.com "
-    },
     {
       "timestamp_utc": "2026-11-15T22:21:25.781729+00:00",
       "target_repo": "streamlit/streamlit",
@@ -245,6 +237,14 @@
       "risk_score": 15.8,
       "new_commits_detected": 2,
       "summary": "**AegisPulse Incident Summary**\n\n*   **Health:** Nominal (SEV-3). All monitored endpoints (GitHub, PyPI, httpbin) returned 200 OK.\n*   **Root-Cause Signal:** No active outage detected. Minor latency drift (max 19.5%) obs"
+    },
+    {
+      "timestamp_utc": "2026-11-28T00:56:10.785895+00:00",
+      "target_repo": "streamlit/streamlit",
+      "severity": "SEV-3 NOMINAL",
+      "risk_score": 31.4,
+      "new_commits_detected": 0,
+      "summary": "* **Health:** System status is SEV-3 NOMINAL; all endpoints are reachable with zero DNS or availability failures.\n* **Root-Cause Signal:** High latency drift detected on `httpbin.org` (+56.2%), likely anomalous noise rat"
     }
   ],
   "seen_commit_shas": [
@@ -319,6 +319,6 @@
     "04884fb17d902c5e8066f60bc4bcc16b371f3ab6",
     "5f96a49730c615df4c9f40981ca05675e7d8d749"
   ],
-  "total_autonomous_runs": 34,
-  "last_run_utc": "2026-11-27T15:55:27.165929+00:00"
+  "total_autonomous_runs": 35,
+  "last_run_utc": "2026-11-28T00:56:10.785895+00:00"
 }
